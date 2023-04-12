@@ -103,6 +103,7 @@ const CheckOut = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem('cart')) || [];
+    localStorage.setItem('checkout',items)
     setData(items);
 
 

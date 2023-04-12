@@ -72,7 +72,7 @@ class LiveSearchFilter extends Component {
         
           onChange={this.onLsChange}
           type="text"
-          placeholder="Поиск ..."
+          placeholder="Іздеу ..."
           className="container"
           ref={this.node}
         />

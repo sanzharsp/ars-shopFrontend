@@ -19,7 +19,7 @@ const ContactPage = () => {
         <TextAnim  width={37} text_main={"Біздің парақша сіз үшін әрқашан ашық."} />
         <div className="banka">
 
-        <a href={url.social.linkedin} className="fa fa-linkedin" id="SocialNetwork"></a>
+        <a href={url.social.linkedin} className="fa fa-whatsapp" id="SocialNetwork"></a>
         <a href={url.social.vk} className="fa fa-vk vk" id="SocialNetwork"></a>
         <a href={url.social.github} className="fa fa-github-square github" id="SocialNetwork"></a>
         <a  href={url.social.instagram} className="fa fa-instagram" id="SocialNetwork"></a>

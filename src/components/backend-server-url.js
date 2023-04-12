@@ -11,10 +11,10 @@
 
     'social':{
 
-        'vk':'#',
-        'linkedin':'#',
+        'vk':'https://vk.com/magazzbekov',
+        'linkedin':'https://wa.me/message/Y4XY75EQWM47A1',
         'github':'#',
-        'instagram':'#',
+        'instagram':'https://instagram.com/magazzbekov?igshid=YmMyMTA2M2Y=',
     },
     Auth:{
         login:'/api/v1/login/',
@@ -36,7 +36,7 @@
         identificated:'/api/v1/news/post/identificated',
         post_delete:'/api/v1/news/post/delete'
     },
-    gmail:'ARSEN@GMAIL.COM',
+    gmail:'magazbekovarsen@gmail.com',
 
     order:'/api/v1/news/post/order',
     catgeory:'/api/v1/category/get/all',
