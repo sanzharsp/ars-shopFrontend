@@ -4,7 +4,6 @@ import axios from 'axios';
 import '../API/getpostmainload.css'
 import ServerError from '../Error/error'
 import url from '../backend-server-url'
-import Footer from '../footer/footer'
 import './MainNewsPage.css'
 import Counter from '../Mobx/ProfileRender/ProfileMobxRener'
 import axiosApiInstance from '../API/auth-header'
@@ -146,7 +145,7 @@ function handleDeleteElement (id) {
       
 )}
 
- <Footer/>
+
       </div>
 
       

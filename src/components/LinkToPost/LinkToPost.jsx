@@ -6,7 +6,7 @@ import Slideshow from '../img/ImageSlider'
 import url from '../backend-server-url'
 import { useParams } from "react-router-dom";
 import Container from '@mui/material/Container';
-import Footer from '../footer/footer';
+
 import CardContent from '@mui/material/CardContent';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
@@ -165,7 +165,7 @@ handleOpen2();
       }}
     />
     </Container>
-    <Footer/>
+
     </>
         
       

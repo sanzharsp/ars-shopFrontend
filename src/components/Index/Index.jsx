@@ -1,11 +1,11 @@
 import '../style/images.css';
 import PostList from '../API/getpostmain';
 
-import Footer from '../footer/footer';
-import {Container,Card, TextField} from '@mui/material';
+
+import {Container,Card, } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
 import * as React from 'react';
-import Box from '@mui/material/Box';
+
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
@@ -187,7 +187,7 @@ const [open, setOpen] = React.useState(false);
          
  
       </Dialog>
-<Footer/>
+
 </div>
 
 </div>

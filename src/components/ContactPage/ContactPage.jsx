@@ -1,5 +1,4 @@
 
-import Footer from '../footer/footer'
 import './ContactPage.css'
 import TextAnim from '../Animation/PrintsTextAnim'
 import url from '../backend-server-url'
@@ -38,7 +37,7 @@ const ContactPage = () => {
       </div>
     <div className="footer_contact">
       
-        <Footer/>
+
         </div>
         </div>
     )

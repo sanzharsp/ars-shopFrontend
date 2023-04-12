@@ -1,6 +1,6 @@
 import './AboutPage.css'
 import TextAnim from '../Animation/PrintsTextAnim'
-import Footer from '../footer/footer'
+
 
 
 const AboutPage = () => {
@@ -83,7 +83,7 @@ const AboutPage = () => {
         </div>
         <div className="paddings"/>
      
-        <Footer/>
+
 
         </div>
     )
