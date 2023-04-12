@@ -87,47 +87,48 @@ const [open, setOpen] = React.useState(false);
 
 </Card>
 </Container>
+<div style={{minHeight:'100vh',display:'flex',flexDirection: 'column'}}>
+
+
+<SpeedDial
+  ariaLabel="SpeedDial basic example"
+  
+  sx={{ position: 'fixed', zIndex: 9999,  bottom: 16, right: 16 }}
+  icon={<SpeedDialIcon />}
+>
+
+    <SpeedDialAction
+      key={'Корзина'}
+
+      icon={<Button onClick={handleClickOpen}>
+          <Badge badgeContent={data.length} color="primary"> <ShoppingCartIcon /> </Badge>
+      
+      </Button>
+    
+      }
+
+      tooltipTitle={'Фильтрация'}
+    />
+              <SpeedDialAction
+      key={'Фильтрация'}
+
+      icon={<Button onClick={()=>{setOpen_(true)}}>
+       <FilterAltIcon /> 
+      
+      </Button>
+    
+      }
+
+      tooltipTitle={'Фильтрация'}
+    />
+
+  
+</SpeedDial>
 
 
 <PostList open_={open_}  setOpen_={setOpen_}/>
 
-<Box sx={{  transform: 'translateZ(0px)', flexGrow: 1 }}>
 
-      <SpeedDial
-        ariaLabel="SpeedDial basic example"
-        sx={{ position: 'absolute', bottom: 16, right: 16 }}
-        icon={<SpeedDialIcon />}
-      >
-   
-          <SpeedDialAction
-            key={'Корзина'}
-
-            icon={<Button onClick={handleClickOpen}>
-                <Badge badgeContent={data.length} color="primary"> <ShoppingCartIcon /> </Badge>
-            
-            </Button>
-          
-            }
- 
-            tooltipTitle={'Фильтрация'}
-          />
-                    <SpeedDialAction
-            key={'Фильтрация'}
-
-            icon={<Button onClick={()=>{setOpen_(true)}}>
-             <FilterAltIcon /> 
-            
-            </Button>
-          
-            }
- 
-            tooltipTitle={'Фильтрация'}
-          />
-   
-        
-      </SpeedDial>
-
-    </Box>
 
     <Dialog
         open={open}
@@ -187,6 +188,7 @@ const [open, setOpen] = React.useState(false);
  
       </Dialog>
 <Footer/>
+</div>
 
 </div>
 

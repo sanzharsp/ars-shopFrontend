@@ -5,16 +5,17 @@ import { Container, Grid, Typography, TextField, Button, Paper } from '@mui/mate
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import axiosApiInstance from '../../components/API/auth-header';
 import url from '../../components/backend-server-url';
 import { Snackbar } from '@mui/material';
+import { useNavigate } from "react-router-dom";
+
 
 const CheckOut = () => {
-
+  let navigate = useNavigate();
   const [open2, setOpen2] = useState(false);
-  const [message, setMessage] = useState('');
+
 
   const handleClose2 = (event, reason) => {
     if (reason === 'clickaway') {
@@ -23,8 +24,8 @@ const CheckOut = () => {
     setOpen2(false);
   };
 
-  const handleOpen = (message) => {
-    setMessage(message);
+  const handleOpen = () => {
+
     setOpen2(true);
   };
 
@@ -39,9 +40,10 @@ const CheckOut = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  const products = JSON.parse(localStorage.getItem('checkout'))
-  const detail = products.map(obj => `<table> <tr><th> Өнім</th></tr> <tr> <td>Аты</td> <td>${obj.title}</td> <td>Дана саны</td> <td>${obj.qty}</td>  </td></tr></table> </br>`);
-  const idArray = products.map(obj => obj.id);
+  localStorage.setItem('checkout',localStorage.getItem('cart'))
+  const products = JSON.parse(localStorage.getItem('checkout')) 
+  const detail = products.map(obj=> `<table> <tr><th> Өнім</th></tr> <tr> <td>Аты</td> <td>${obj.title}</td> <td>Дана саны</td> <td>${obj.qty}</td>  </td></tr></table> </br>`);
+  const idArray = products.map((obj) => obj.id);
   const [formData, setFormData] = useState({
     address: '',
     post_index: '',
@@ -68,8 +70,14 @@ const CheckOut = () => {
         console.log(res)
         handleOpen()
         handleClose()
+
       }).catch((err) => {
-        console.log(err)
+        if (err.response.status === 401){
+     
+      
+        navigate("/login", { replace: true })
+        }
+
       })
 
     }
@@ -108,7 +116,9 @@ const CheckOut = () => {
     }
     const updatedCartItems = [...data];
     updatedCartItems[index].qty = value;
+
     setData(updatedCartItems);
+
     setPrices(true);
    
   };

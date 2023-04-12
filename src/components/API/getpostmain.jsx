@@ -18,7 +18,7 @@ const PostListItem = ({open_,setOpen_})=>{
 
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    axiosApiInstance.get(url.baseUrl+url.catgeory).then((response)=>{
+    axios.get(url.baseUrl+url.catgeory).then((response)=>{
       console.log(response.data.results)
       setCategories(response.data.results)
     })
@@ -32,7 +32,7 @@ const PostListItem = ({open_,setOpen_})=>{
   }
   const handleCategorySelect = (categoryId,categoryName) => {
    console.log(categoryName)
-   axiosApiInstance.get(`${url.baseUrl}${url.filter}${categoryName}`).then((response)=>{
+   axios.get(`${url.baseUrl}${url.filter}${categoryName}`).then((response)=>{
     setDataLatesNews(response.data.results)
    })
    setOpen_(false)
