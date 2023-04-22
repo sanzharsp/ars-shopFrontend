@@ -1,42 +1,42 @@
-import Head from "./components/head/head"
-import './components/style/images.css'
-import React  from 'react';
-import Routings from './components/routing/routing'
-import {BrowserRouter as Router} from "react-router-dom";
+// import Head from "./components/head/head"
+// import './components/style/images.css'
+// import React  from 'react';
+// import Routings from './components/routing/routing'
+// import {BrowserRouter as Router} from "react-router-dom";
 
-function App() {
+// function App() {
 
-  <Routings />
-  return (
-    <div>
+//   <Routings />
+//   return (
+//     <div>
     
-    <Router>
+//     <Router>
     
-<header>
+// <header>
 
       
-<Head 
- title={"ARS-SHOP"}
- home={"БАСТЫ БЕТ"}  
- skills={"КӨШБАСШЫ ТААУААРЛААР"} 
- projects={"БІЗ ТУРАЛЫ"} 
- contact={"БАЙЛАНЫС"} 
- register={'ТІРКЕЛУ'} 
- login={'КІРУ'}
+// <Head 
+//  title={"ARS-SHOP"}
+//  home={"БАСТЫ БЕТ"}  
+//  skills={"КӨШБАСШЫ ТААУААРЛААР"} 
+//  projects={"БІЗ ТУРАЛЫ"} 
+//  contact={"БАЙЛАНЫС"} 
+//  register={'ТІРКЕЛУ'} 
+//  login={'КІРУ'}
 
- />
-
-
-</header>
-
-<Routings /> 
- </Router>
+//  />
 
 
-</div>
+// </header>
+
+// <Routings /> 
+//  </Router>
 
 
-);
-}
+// </div>
 
-export default App;
+
+// );
+// }
+
+// export default App;
